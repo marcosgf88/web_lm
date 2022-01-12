@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>II Jornadas de Informática</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">    
+        
+</head>
+<body>
+
+    <header>
+        <div id="div_header">
+            <h1>II Jornadas de Informática</h1>
+            <p><b>Valencia,3 y 4 de Abril de 2021</b></p>
+        </div>
+        <div>
+        <img id="img_header" src="imágenes/logo.png"
+        alt="Imagen de una placa base con el contorno de un cerebro"/>
+        </div>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="programación.html">Programación</a></li>
+            <li><u>Registro a las Jornadas</u></li>        
+        </ul>
+    </nav>
+    <div>
+        <h2>Registro a las jornadas</h2>
+        <div>
+            <h3>Datos personales</h3>
+            <div>
+                <form action="/registroformulario.php" name="registro" id="registro" method="GET">
+                    <i class="fas fa-user"></i><label for="nombre">Nombre:</label>
+                    <input type="text" pattern="[A-Z,a-z]{2,50}" required>
+                    <i class="fas fa-user"></i><label for="apellidos">Apellidos:</label>
+                    <input type="text" pattern="[A-Z,a-z ]{2,128}" required>
+                    <i class="fas fa-at"></i><label for="email">Email:</label>
+                    <input type="email" required><br><br>
+                    <i class="fas fa-phone"></i><label for="teléfono">teléfono:</label>
+                    <input type="tel" pattern="[0-9]{5,20}" required><br>
+                    <i class="fas fa-camera" style="padding-left: 150px;"></i><label for="foto_de_perfil">Adjunta una imagen para el perfil</label>
+                    <input type="file" style="padding-top: 20px;">
+                </form>
+            </div>
+
+        </div>
+
+        <div id="div_perfil">
+            <h3>Perfil de usuario</h3>
+            <div style="padding-left: 150px;">            
+                <label for="motivo">Motivo por el cúal quieres asistir</label>
+                <input type="text" pattern="[A-Z,a-z]{2,200}" form="registro" required>
+                <label for="actividad">Actividad Profesional</label>
+                <select name="profesion" form="registro" required>
+                    <option value="" selected="selected">- selecciona -</option>
+                    <option value="bachiller">Estudiante Bachillerato</option>
+                    <option value="universidad">Estudiante Universitario</option>
+                    <option value="doctorado">Doctorado</option>
+                    <option value="informatico">Profesional Informático</option>
+                    <option value="profesor">Profesor</option>
+                    <option value="otros">Otros</option>
+                </select><br><br>
+
+                <label for="dias">Días a los que vas asistir</label>
+                <select name="dias" form="registro" required>
+                    <option value="" selected="selected">- selecciona -</option>
+                    <option value="ambos">Asistiré los dos días</option>
+                    <option value="3_abril">Asistiré el 3 de Abril</option>
+                    <option value="4_abril">Asistiré el 4 de Abril</option>
+                </select>                         
+            
+            </div>
+        </div>
+        <div>
+            <h3>Selecciona los talleres a los que asistiras</h3>
+            <div id="div_checkbox">                
+                <label for="computacion"><input type="checkbox" value="computaciom" form="registro" >Computación Cúantica: la Próxima Revolución de la Informática</label>
+                <label for="animacion"><input type="checkbox" value="3d" form="registro" >Animación 3D en la industria del videojuego</label>
+                <label for="moviles"><input type="checkbox" value="moviles" form="registro" >Taller sobre análisis de dispositivos móviles</label>
+                <label for="metodologias"><input type="checkbox" value="metodologias" form="registro" >Metodologías Ágiles y transformación Digital</label>
+                <label for="realidad_virtual"><input type="checkbox" value="realidad_virtual" form="registro" >Realidad virtual y aumentada: experiencias asequibles y útiles en educación</label>
+                <label for="lego"><input type="checkbox" value="lego" form="registro" >First lego league</label>                    
+            </div> 
+        </div>
+        <label for="politica_privacidad" style="padding-left: 150px;"><input type="checkbox" value="privacidad" form="registro" required>He leído y acepto la Politica de Privacidad</label>
+
+        <div id="div_boton">
+            <input type="submit" value="Enviar" id="boton" form="registro">
+        </div>
+    </div>
+    <footer>
+        <p>Actividad realizada por Marcos González Fluixà, para la asignatura de Lenguaje de Marcas</p> 
+         <p>Primer trimestre 2020-2021</p>
+    </footer>
+</body>
+</html>
